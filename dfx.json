@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "idoge_backend": {
+      "main": "src/idoge_backend/main.mo",
+      "type": "motoko"
+    },
+    "idoge_frontend": {
+      "dependencies": [
+        "idoge_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/idoge_frontend/src/index.html"
+      },
+      "source": [
+        "src/idoge_frontend/assets",
+        "dist/idoge_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
