@@ -10,6 +10,16 @@ module.exports = {
             'poppins': ['Poppins', 'sans-serif'],
           },
       },
+      screens: {
+        ts: "360px",
+        xs: "375px",
+        ss: "620px",
+        sm: "770px",
+        md: "900px",
+        mid: "1024px",
+        lg: "1200px",
+        xl: "1700px",
+      },
     },
     plugins: [],
   }
