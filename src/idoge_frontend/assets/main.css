@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: 'Retro';
+    src: url('../src/fonts/Retro_Gaming.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
-    font-family: Poppins;
+    font-family: Retro;
 }

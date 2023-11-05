@@ -6,7 +6,7 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-            'mont': ['Montserrat', 'sans-serif'],
+            'retro': ['Retro', 'sans-serif'],
             'poppins': ['Poppins', 'sans-serif'],
           },
       },

@@ -1,20 +1,17 @@
-import Main from "./components/Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Privacy from "./pages/Privacy";
+import TermsAndConditions from "./pages/Terms";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center bg-purple-900">
-      <div className="xl:max-w-[1500px] w-full ">
-        <div
-          className=" text-gray-300 bg-contain  bg-center bg-no-repeat h-full w-full"
-          style={{
-            backgroundImage: "url('/Background.jpg')",
-            backgroundSize: "100% 100%",
-          }}
-        >
-          <Main />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
