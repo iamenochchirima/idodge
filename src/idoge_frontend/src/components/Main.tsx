@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const data = [
   ["Element", "Percentage"],
-  ["Community Airdrop", 10],
-  ["Liquidity Pool", 65],
+  ["Liquidity Pool", 75],
   ["Reserves", 10],
   ["Marketing", 10],
   ["Development & Legal", 5],
@@ -46,17 +45,21 @@ const Main = () => {
 
   return (
     <div className="flex flex-col text-white">
-      <div className="flex justify-between mx-10 md:mx-[200px]  items-center pt-5">
+      <div className="flex justify-center ss:justify-between mx-10 md:mx-[200px]  items-center pt-5">
         <div className="flex items-center gap-2">
           <img src="/idoge.png" alt="IDoge" className="h-[80px] w-[80px] " />
           <h3 className="text-4xl font-bold">iDOGE</h3>
         </div>
-        <img src="/clown.png" alt="IDoge" className="h-[200px] w-[200px] " />
+        <img
+          src="/clown.png"
+          alt="IDoge"
+          className="h-[200px] w-[200px] hidden ss:block "
+        />
       </div>
 
       <div className="text-center mt-[100px] px-4 py-8 my-5 mx-10 md:mx-[200px] min-h-[200px] rounded-2xl">
-        <h2 className="text-4xl font-bold  ">About Internet Doge (iDOGE)</h2>
-        <p className="mt-4 text-2xl">
+        <h2 className="ss:text-4xl text-2xl font-bold  ">About Internet Doge (iDOGE)</h2>
+        <p className="mt-4 ss:text-2xl text-lg">
           Internet Doge is a vibrant and fun cryptocurrency that embodies the
           spirit of memes, laughter, and community. Inspired by Billy Markus and
           Jackson Palmer’s Dogecoin, our coin seeks to bring joy and
@@ -87,16 +90,16 @@ const Main = () => {
       <div className="">
         <h3 className="text-center text-2xl">iDOGE Token - ICRC-1</h3>
         <div className="flex justify-center my-5 ">
-          <div className="border border-solid w-1/2 p-4 rounded-xl flex items-center gap-5 justify-center">
-            <div className="flex items-center gap-3">
-              <h3>Canister Id: </h3>
+          <div className="mid:border ss:w-1/2 p-4 rounded-xl flex-col ss:flex ss:flex-row items-center gap-5 justify-center">
+            <div className="flex-col ss:flex ss:flex-row items-center gap-3">
+              <h3 className="xs:text-base text-xs">Canister Id: </h3>
               <pre
-                className="font-retro text-red-200 text-xl"
+                className="font-retro text-red-200 text-xs ss:text-xl"
                 ref={textRef}
               >{`eayyd-iiaaa-aaaah-adtea-cai`}</pre>
             </div>
             <button
-              className={`border px-3 py-1 rounded-lg`}
+              className={`border px-3 ss:py-1 py-0.5 text-xs ss:text-base mt-1 ss:mt-0 rounded-lg`}
               onClick={copyTextToClipboard}
             >
               {isCopied ? "Copied!" : "Copy"}
@@ -123,29 +126,25 @@ const Main = () => {
       </div>
 
       <div className=" px-0 sm:px-4 ss:py-8 py-0 bg-blue-400 bg-opacity-20 my-5 mx-10 md:mx-[200px] min-h-[400px] rounded-2xl">
-        <h3 className="text-center text-3xl">Token allocations</h3>
-        <ul className="flex flex-col gap-3 mt-5">
-          <li className="flex justify-between items-center text-xl font-bold border-b border-solid border-blue-300 py-3">
+        <h3 className="text-center text-xl font-bold ss:text-3xl">Token allocations</h3>
+        <ul className="flex flex-col ss:text-xl p-2 font-bold gap-3 mt-5">
+          <li className="flex justify-between items-center  border-b border-solid border-blue-300 py-3">
             <p>iDOGE - 100%</p>
             <p>1 000 000</p>
           </li>
-          <li className="flex justify-between items-center text-xl font-bold border-b border-solid border-blue-300 py-3">
-            <p>Community Airdrop - 10%</p>
-            <p>100 000</p>
+          <li className="flex justify-between items-center   border-b border-solid border-blue-300 py-3">
+            <p>Liquidity Pool - 75%</p>
+            <p>750 000</p>
           </li>
-          <li className="flex justify-between items-center text-xl font-bold border-b border-solid border-blue-300 py-3">
-            <p>Liquidity Pool - 65%</p>
-            <p>650 000</p>
-          </li>
-          <li className="flex justify-between items-center text-xl font-bold border-b border-solid border-blue-300 py-3">
+          <li className="flex justify-between items-center   border-b border-solid border-blue-300 py-3">
             <p>Reserves - 10% </p>
             <p>100 000</p>
           </li>
-          <li className="flex justify-between items-center text-xl font-bold border-b border-solid border-blue-300 py-3">
+          <li className="flex justify-between items-center  border-b border-solid border-blue-300 py-3">
             <p>Marketing - 10% </p>
             <p>100 000</p>
           </li>
-          <li className="flex justify-between items-center text-xl font-bold">
+          <li className="flex justify-between items-center ">
             <p>Development & Legal - 5%</p>
             <p>50 000</p>
           </li>
@@ -154,8 +153,8 @@ const Main = () => {
 
       <hr className="mt-[50px]" />
 
-      <div className="mt-[50px] pb-10 flex justify-center items-center">
-        <div className="border-r pr-5 border-solid">
+      <div className="mt-[50px] pb-10 flex-col ss:flex ss:flex-row justify-center items-center">
+        <div className="ss:border-r mb-2 ss:mb-0 ss:pr-5 border-solid justify-center flex">
           <a
             href="https://dfinity.org"
             className="flex justify-center items-center"
@@ -295,7 +294,7 @@ const Main = () => {
             </svg>
           </a>
         </div>
-        <div className="ml-5 flex flex-col ">
+        <div className="ml-5 flex flex-col text-xs text-center ss:text-base ">
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms and Conditions</Link>
         </div>
